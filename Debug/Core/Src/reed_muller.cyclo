@@ -1,0 +1,6 @@
+../Core/Src/reed_muller.c:33:13:encode	1
+../Core/Src/reed_muller.c:64:13:hadamard	3
+../Core/Src/reed_muller.c:96:13:expand_and_sum	6
+../Core/Src/reed_muller.c:122:16:find_peaks	2
+../Core/Src/reed_muller.c:149:6:PQCLEAN_HQC128_CLEAN_reed_muller_encode	3
+../Core/Src/reed_muller.c:169:6:PQCLEAN_HQC128_CLEAN_reed_muller_decode	2

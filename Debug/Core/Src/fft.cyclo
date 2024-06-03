@@ -1,0 +1,7 @@
+../Core/Src/fft.c:24:13:compute_fft_betas	2
+../Core/Src/fft.c:41:13:compute_subset_sums	3
+../Core/Src/fft.c:64:13:radix	5
+../Core/Src/fft.c:115:13:radix_big	2
+../Core/Src/fft.c:158:13:fft_rec	11
+../Core/Src/fft.c:258:6:PQCLEAN_HQC128_CLEAN_fft	3
+../Core/Src/fft.c:315:6:PQCLEAN_HQC128_CLEAN_fft_retrieve_error_poly	2

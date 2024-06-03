@@ -1,0 +1,8 @@
+../Core/Src/reed_solomon.c:22:6:PQCLEAN_HQC128_CLEAN_reed_solomon_encode	4
+../Core/Src/reed_solomon.c:53:13:compute_syndromes	3
+../Core/Src/reed_solomon.c:78:17:compute_elp	8
+../Core/Src/reed_solomon.c:150:13:compute_roots	1
+../Core/Src/reed_solomon.c:167:13:compute_z_poly	4
+../Core/Src/reed_solomon.c:200:13:compute_error_values	8
+../Core/Src/reed_solomon.c:267:13:correct_errors	2
+../Core/Src/reed_solomon.c:290:6:PQCLEAN_HQC128_CLEAN_reed_solomon_decode	1

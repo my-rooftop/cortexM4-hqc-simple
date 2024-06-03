@@ -1,0 +1,6 @@
+../Core/Src/gf2x.c:20:13:base_mul	704	static
+../Core/Src/gf2x.c:92:13:karatsuba_add1	48	static
+../Core/Src/gf2x.c:104:13:karatsuba_add2	72	static
+../Core/Src/gf2x.c:127:13:karatsuba	64	static
+../Core/Src/gf2x.c:168:13:reduce	64	static
+../Core/Src/gf2x.c:191:6:PQCLEAN_HQC128_CLEAN_vect_mul	22192	static

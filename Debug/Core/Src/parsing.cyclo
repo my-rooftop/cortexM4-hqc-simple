@@ -1,0 +1,9 @@
+../Core/Src/parsing.c:11:17:load8	2
+../Core/Src/parsing.c:22:6:PQCLEAN_HQC128_CLEAN_load8_arr	8
+../Core/Src/parsing.c:47:6:PQCLEAN_HQC128_CLEAN_store8_arr	4
+../Core/Src/parsing.c:68:6:PQCLEAN_HQC128_CLEAN_hqc_secret_key_to_string	1
+../Core/Src/parsing.c:85:6:PQCLEAN_HQC128_CLEAN_hqc_secret_key_from_string	1
+../Core/Src/parsing.c:107:6:PQCLEAN_HQC128_CLEAN_hqc_public_key_to_string	1
+../Core/Src/parsing.c:121:6:PQCLEAN_HQC128_CLEAN_hqc_public_key_from_string	1
+../Core/Src/parsing.c:142:6:PQCLEAN_HQC128_CLEAN_hqc_ciphertext_to_string	1
+../Core/Src/parsing.c:158:6:PQCLEAN_HQC128_CLEAN_hqc_ciphertext_from_string	1

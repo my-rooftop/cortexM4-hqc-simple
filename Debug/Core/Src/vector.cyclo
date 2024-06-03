@@ -1,0 +1,9 @@
+../Core/Src/vector.c:23:24:compare_u32	1
+../Core/Src/vector.c:27:17:single_bit_mask	2
+../Core/Src/vector.c:42:24:cond_sub	1
+../Core/Src/vector.c:49:24:reduce	1
+../Core/Src/vector.c:66:6:PQCLEAN_HQC128_CLEAN_vect_set_random_fixed_weight	7
+../Core/Src/vector.c:122:6:PQCLEAN_HQC128_CLEAN_vect_set_random	1
+../Core/Src/vector.c:139:6:PQCLEAN_HQC128_CLEAN_vect_add	2
+../Core/Src/vector.c:153:9:PQCLEAN_HQC128_CLEAN_vect_compare	2
+../Core/Src/vector.c:171:6:PQCLEAN_HQC128_CLEAN_vect_resize	4

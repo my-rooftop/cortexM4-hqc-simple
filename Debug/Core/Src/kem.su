@@ -1,0 +1,3 @@
+../Core/Src/kem.c:29:5:PQCLEAN_HQC128_CLEAN_crypto_kem_keypair	16	static
+../Core/Src/kem.c:43:5:PQCLEAN_HQC128_CLEAN_crypto_kem_enc	11256	static
+../Core/Src/kem.c:85:5:PQCLEAN_HQC128_CLEAN_crypto_kem_dec	15712	static

@@ -1,0 +1,6 @@
+../Core/Src/gf.c:16:17:trailing_zero_bits_count	24	static
+../Core/Src/gf.c:32:17:gf_reduce	96	static
+../Core/Src/gf.c:70:13:gf_carryless_mul	56	static
+../Core/Src/gf.c:114:10:PQCLEAN_HQC128_CLEAN_gf_mul	32	static
+../Core/Src/gf.c:126:10:PQCLEAN_HQC128_CLEAN_gf_square	40	static
+../Core/Src/gf.c:143:10:PQCLEAN_HQC128_CLEAN_gf_inverse	24	static

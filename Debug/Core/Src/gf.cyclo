@@ -1,0 +1,6 @@
+../Core/Src/gf.c:16:17:trailing_zero_bits_count	2
+../Core/Src/gf.c:32:17:gf_reduce	3
+../Core/Src/gf.c:70:13:gf_carryless_mul	4
+../Core/Src/gf.c:114:10:PQCLEAN_HQC128_CLEAN_gf_mul	1
+../Core/Src/gf.c:126:10:PQCLEAN_HQC128_CLEAN_gf_square	2
+../Core/Src/gf.c:143:10:PQCLEAN_HQC128_CLEAN_gf_inverse	1

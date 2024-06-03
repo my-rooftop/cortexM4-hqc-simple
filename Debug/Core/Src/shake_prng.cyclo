@@ -1,0 +1,3 @@
+../Core/Src/shake_prng.c:19:6:PQCLEAN_HQC128_CLEAN_seedexpander_init	1
+../Core/Src/shake_prng.c:37:6:PQCLEAN_HQC128_CLEAN_seedexpander	3
+../Core/Src/shake_prng.c:55:6:PQCLEAN_HQC128_CLEAN_seedexpander_release	1
