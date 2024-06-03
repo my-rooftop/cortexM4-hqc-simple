@@ -20,6 +20,7 @@
 #include "main.h"
 #include "api.h"
 #include "hqc.h"
+#include "profiling.h"
 
 #include <stdint.h>
 
@@ -103,10 +104,16 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint32_t start_tick_keypair, end_tick_keypair, elapsed_ticks_keypair;
-  uint32_t start_tick_enc, end_tick_enc, elapsed_ticks_enc;
-  uint32_t start_tick_dec, end_tick_dec, elapsed_ticks_dec;
 
+	struct Trace_time keygen_time = {0, 0, 0, 0};
+	struct Trace_time encap_time = {0, 0, 0, 0};
+	struct Trace_time decap_time = {0, 0, 0, 0};
+
+  uint32_t start_tick, end_tick, total_tick;
+  uint32_t start_tick_keypair, end_tick_keypair, total_tick_keypair = 0;
+  uint32_t start_tick_enc, end_tick_enc, total_tick_enc = 0;
+  uint32_t start_tick_dec, end_tick_dec, total_tick_dec = 0;
+  //todo : time analysis 하기 전 시간 측정해서 오버헤드 어느정도인지 계산하기
   while (1)
   {
       /* USER CODE END WHILE */
@@ -116,26 +123,29 @@ int main(void)
       unsigned char ss1[PQCLEAN_HQC128_CLEAN_CRYPTO_BYTES];
       unsigned char ss2[PQCLEAN_HQC128_CLEAN_CRYPTO_BYTES];
 
-      for(int i = 0; i < 5; i++) {
+
+      start_tick = HAL_GetTick();
+      for(int i = 0; i < 500; i++) {
           // Measure key pair generation time
           start_tick_keypair = HAL_GetTick();
-          PQCLEAN_HQC128_CLEAN_crypto_kem_keypair(pk, sk);
+          PQCLEAN_HQC128_CLEAN_crypto_kem_keypair(pk, sk, &keygen_time);
           end_tick_keypair = HAL_GetTick();
-          elapsed_ticks_keypair += end_tick_keypair - start_tick_keypair;
+          total_tick_keypair += end_tick_keypair - start_tick_keypair;
 
           // Measure encryption time
           start_tick_enc = HAL_GetTick();
-          PQCLEAN_HQC128_CLEAN_crypto_kem_enc(ct, ss1, pk);
+          PQCLEAN_HQC128_CLEAN_crypto_kem_enc(ct, ss1, pk, &encap_time);
           end_tick_enc = HAL_GetTick();
-          elapsed_ticks_enc += end_tick_enc - start_tick_enc;
+          total_tick_enc += end_tick_enc - start_tick_enc;
 
           // Measure decryption time
           start_tick_dec = HAL_GetTick();
-          PQCLEAN_HQC128_CLEAN_crypto_kem_dec(ss2, ct, sk);
+          PQCLEAN_HQC128_CLEAN_crypto_kem_dec(ss2, ct, sk, &decap_time);
           end_tick_dec = HAL_GetTick();
-          elapsed_ticks_dec += end_tick_dec - start_tick_dec;
+          total_tick_dec += end_tick_dec - start_tick_dec;
       }
-      uint32_t sum = elapsed_ticks_keypair + elapsed_ticks_enc + elapsed_ticks_dec;
+      end_tick = HAL_GetTick();
+      total_tick = end_tick - start_tick;
 
       /* USER CODE BEGIN 3 */
   }
