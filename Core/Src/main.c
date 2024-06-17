@@ -104,8 +104,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   uint32_t start_tick_keypair, end_tick_keypair, elapsed_ticks_keypair;
-  uint32_t start_tick_enc, end_tick_enc, elapsed_ticks_enc;
-  uint32_t start_tick_dec, end_tick_dec, elapsed_ticks_dec;
+
 
   while (1)
   {
@@ -116,27 +115,19 @@ int main(void)
       unsigned char ss1[PQCLEAN_HQC128_CLEAN_CRYPTO_BYTES];
       unsigned char ss2[PQCLEAN_HQC128_CLEAN_CRYPTO_BYTES];
 
-      for(int i = 0; i < 5; i++) {
+      start_tick_keypair = HAL_GetTick();
+      for(int i = 0; i < 500; i++) {
           // Measure key pair generation time
-          start_tick_keypair = HAL_GetTick();
           PQCLEAN_HQC128_CLEAN_crypto_kem_keypair(pk, sk);
-          end_tick_keypair = HAL_GetTick();
-          elapsed_ticks_keypair += end_tick_keypair - start_tick_keypair;
 
           // Measure encryption time
-          start_tick_enc = HAL_GetTick();
           PQCLEAN_HQC128_CLEAN_crypto_kem_enc(ct, ss1, pk);
-          end_tick_enc = HAL_GetTick();
-          elapsed_ticks_enc += end_tick_enc - start_tick_enc;
 
           // Measure decryption time
-          start_tick_dec = HAL_GetTick();
           PQCLEAN_HQC128_CLEAN_crypto_kem_dec(ss2, ct, sk);
-          end_tick_dec = HAL_GetTick();
-          elapsed_ticks_dec += end_tick_dec - start_tick_dec;
       }
-      uint32_t sum = elapsed_ticks_keypair + elapsed_ticks_enc + elapsed_ticks_dec;
-
+      end_tick_keypair = HAL_GetTick();
+      uint32_t elapsed_ticks_keypair = end_tick_keypair - start_tick_keypair;
       /* USER CODE BEGIN 3 */
   }
 
