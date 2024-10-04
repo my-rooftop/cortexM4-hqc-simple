@@ -105,6 +105,10 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
+  uint32_t start_tick_keypair, end_tick_keypair, elapsed_ticks_keypair;
+
+
+
 	struct Trace_time keygen_time = {0, 0, 0, 0};
 	struct Trace_time encap_time = {0, 0, 0, 0};
 	struct Trace_time decap_time = {0, 0, 0, 0};
@@ -122,7 +126,6 @@ int main(void)
       unsigned char ct[PQCLEAN_HQC128_CLEAN_CRYPTO_CIPHERTEXTBYTES];
       unsigned char ss1[PQCLEAN_HQC128_CLEAN_CRYPTO_BYTES];
       unsigned char ss2[PQCLEAN_HQC128_CLEAN_CRYPTO_BYTES];
-
 
       start_tick = HAL_GetTick();
       for(int i = 0; i < 500; i++) {
@@ -146,6 +149,7 @@ int main(void)
       }
       end_tick = HAL_GetTick();
       total_tick = end_tick - start_tick;
+
 
       /* USER CODE BEGIN 3 */
   }
